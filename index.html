@@ -7,46 +7,94 @@
     <title>Crazy Ferret Games</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
+            min-height: 100vh;
+
             font-family: Arial, sans-serif;
-            background: #111;
             color: white;
-            text-align: center;
+
+            /* Background image */
+            background-image: url("background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Dark overlay so text is easier to read */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 20, 0.35);
+            z-index: -1;
         }
 
         header {
-            padding: 60px 20px;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 64px;
+            margin: 0 0 10px;
+
+            text-shadow:
+                4px 4px 0 #000,
+                0 0 15px #4c6cff;
         }
 
         p {
-            color: #bbb;
-            font-size: 20px;
+            font-size: 22px;
+            text-shadow: 3px 3px 0 #000;
         }
 
         .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #3b82f6;
+            margin-top: 25px;
+
+            padding: 14px 30px;
+
+            background: #303cff;
             color: white;
+
             text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+
+            border: 3px solid #111;
             border-radius: 8px;
+
+            box-shadow: 5px 5px 0 #000;
         }
 
         .button:hover {
-            background: #2563eb;
+            transform: translate(2px, 2px);
+            box-shadow: 3px 3px 0 #000;
+        }
+
+        #games {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(0, 0, 20, 0.75);
         }
 
         footer {
-            margin-top: 100px;
-            padding: 20px;
-            color: #777;
+            padding: 25px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -55,15 +103,16 @@
 
     <header>
         <h1>Crazy Ferret Games</h1>
-        <p>Welcome to the official Crazy Ferret Games website!</p>
 
-        <a class="button" href="#games">View Games</a>
+        <p>Games made by a crazy ferret.</p>
+
+        <a class="button" href="#games">VIEW GAMES</a>
     </header>
 
-    <main id="games">
+    <section id="games">
         <h2>Games</h2>
         <p>Coming soon...</p>
-    </main>
+    </section>
 
     <footer>
         © 2026 Crazy Ferret Games
@@ -71,3 +120,4 @@
 
 </body>
 </html>
+GitHub folder setup
